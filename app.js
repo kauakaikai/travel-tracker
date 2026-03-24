@@ -31,7 +31,7 @@ const adicionarDespesa = () => {
     valorEstrageiro: valorOriginal,
     valorReal: valorConvertidoBRL,
   };
-  despasas.push(novaDespesa);
+  despesas.push(novaDespesa);
   salvarNoLocalStorage();
 
   inputDesc.value = "";
