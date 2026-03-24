@@ -46,13 +46,16 @@ btnAdicionar.addEventListener("click", adicionarDespesa);
 const atualizarTela = () => {
   const htmlDaLista = despesas.map((item) => {
     return;
-    <li>
-      <div>
-        <strong>${item.descricao}</strong> <br></br>
-        <small>U$ ${item.valorEstrageiro.toFixed(2)}</small>
-      </div>
-      <span class="valor">R$ ${item.valorReal.toFixed(2)}</span>
-    </li>;
+    <html>
+      <li>
+        <div>
+          <strong>${item.descricao}</strong> <br></br>
+          <small>U$ ${item.valorEstrageiro.toFixed(2)}</small>
+        </div>
+        <span class="valor">R$ ${item.valorReal.toFixed(2)}</span>
+      </li>
+      ;
+    </html>;
   });
   listaDespesaDOM.innerHTML = htmlDaLista.join("");
 
