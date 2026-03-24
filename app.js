@@ -19,7 +19,7 @@ const adicionarDespesa = () => {
 
   if (desc === "" || isNaN(valorOriginal) || isNaN(cotacao)) {
     alert(
-      "Por favor, preencha todos os campso corretamente com valores válidos."
+      "Por favor, preencha todos os campos corretamente com valores válidos."
     );
     return;
   }
@@ -45,18 +45,16 @@ btnAdicionar.addEventListener("click", adicionarDespesa);
 
 const atualizarTela = () => {
   const htmlDaLista = despesas.map((item) => {
-    return;
-  });
-  <html>
-    <li>
-      <div>
+    return `
+      <li>
+       <div>
         <strong>${item.descricao}</strong> <br></br>
         <small>U$ ${item.valorEstrageiro.toFixed(2)}</small>
       </div>
       <span class="valor">R$ ${item.valorReal.toFixed(2)}</span>
-    </li>
-    ;
-  </html>;
+      </li>
+      `;
+  });
   listaDespesaDOM.innerHTML = htmlDaLista.join("");
 
   let somaTotal = 0;
